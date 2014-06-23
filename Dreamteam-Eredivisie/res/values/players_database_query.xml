@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="players">
+		<item>INSERT INTO players (name,club,position,value) VALUES (\'Kenneth Vermeer\', \'AJAX\', \'Goalkeeper\', 3000000)</item>
+		<item>INSERT INTO players (name,club,position,value) VALUES (\'Jasper Cillisen\', \'AJAX\', \'Goalkeeper\', 5000000)</item>
+		<item>INSERT INTO players (name,club,position,value) VALUES (\'Ricardo van Rhijn\', \'AJAX\', \'Defender\', 4500000)</item>
+	</string-array>
+</resources>

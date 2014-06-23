@@ -25,21 +25,21 @@ used by:
 used by: 
 - Filtered Database to store your preferred players to
 - My Squad to remove your preferred players from
-- Select Team to select your team from
+- Show Team to select your team from
 - Post Your Team to send your database
 
 Activities structure:
 ---------------------
 * [Home][]
 	* [My Squad][]
-		* [Select Team][]
+		* [Show Team][]
 	* [Database Filter][]
 		* [Filtered Database][]
 	* [Post Your Team][]
 
 [Home]: https://github.com/Sjaakja/native_app/blob/master/doc/home.png
 [My Squad]: https://github.com/Sjaakja/native_app/blob/master/doc/my_squad.png
-[Select Team]: https://github.com/Sjaakja/native_app/blob/master/doc/input.png
+[Show Team]: https://github.com/Sjaakja/native_app/blob/master/doc/input.png
 [Database Filter]: https://github.com/Sjaakja/native_app/blob/master/doc/database_filter.png
 [Filtered Database]: https://github.com/Sjaakja/native_app/blob/master/doc/filtered_database.png
 [Post Your Team]: https://github.com/Sjaakja/native_app/blob/master/doc/post.png
@@ -48,7 +48,7 @@ Classes:
 --------
 * Home (extends activity)
 * My Squad (extends activity)
-* Select Team (extends activity)
+* Show Team (extends activity)
 * Database Filter (extends activity)
 * Filtered Database (extends activity)
 * Post Your Team (extends activity)

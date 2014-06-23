@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dreamteam_eredivisie"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.dreamteam_eredivisie.Home"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.dreamteam_eredivisie.MySquad"
+            android:label="@string/title_activity_my_squad" >
+        </activity>
+        <activity
+            android:name="com.example.dreamteam_eredivisie.ShowTeam"
+            android:label="@string/title_activity_show_team" >
+        </activity>
+        <activity
+            android:name="com.example.dreamteam_eredivisie.DatabaseFilter"
+            android:label="@string/title_activity_database_filter" >
+        </activity>
+        <activity
+            android:name="com.example.dreamteam_eredivisie.FilteredDatabase"
+            android:label="@string/title_activity_filtered_database" >
+        </activity>
+        <activity
+            android:name="com.example.dreamteam_eredivisie.PostTeam"
+            android:label="@string/title_activity_post_team" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Dreamteam - Eredivisie</string>
+    <string name="title_activity_my_squad">My Squad</string>
+    <string name="title_activity_show_team">ShowTeam</string>
+    <string name="title_activity_database_filter">Database</string>
+    <string name="title_activity_filtered_database">Filtered Database</string>
+    <string name="title_activity_post_team">Post My Team</string>
+    <string name="search_button">Search</string>
+    
+    <string name="copyright">Copyright © Jaap van Bergeijk</string>
+
+</resources>

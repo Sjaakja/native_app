@@ -8,14 +8,14 @@ A football dreamteam game
 Structure of the app with links to mockup pictures:
 * [Home][]
 	* [My Squad][]
-		* [Select Team][]
+		* [Show Team][]
 	* [Database Filter][]
 		* [Filtered Database][]
 	* [Post Your Team][]
 
 [Home]: https://github.com/Sjaakja/native_app/blob/master/doc/home.png
 [My Squad]: https://github.com/Sjaakja/native_app/blob/master/doc/my_squad.png
-[Select Team]: https://github.com/Sjaakja/native_app/blob/master/doc/input.png
+[Show Team]: https://github.com/Sjaakja/native_app/blob/master/doc/input.png
 [Database Filter]: https://github.com/Sjaakja/native_app/blob/master/doc/database_filter.png
 [Filtered Database]: https://github.com/Sjaakja/native_app/blob/master/doc/filtered_database.png
 [Post Your Team]: https://github.com/Sjaakja/native_app/blob/master/doc/post.png

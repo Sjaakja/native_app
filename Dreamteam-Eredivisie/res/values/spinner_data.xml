@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="position">
+	    <item>Not Specified</item>
+		<item>Goalkeeper</item>
+		<item>Defender</item>
+		<item>Midfielder</item>
+		<item>Attacker</item>
+	</string-array>
+	<string-array name="side">
+		<item>Not Specified</item>
+		<item>Right</item>
+		<item>Left</item>
+		<item>Centre</item>
+	</string-array>
+	<string-array name="club">
+		<item>Not Specified</item>
+		<item>ADO Den Haag</item>
+		<item>AJAX</item>
+		<item>AZ</item>
+		<item>Excelsior</item>
+		<item>FC Dordrecht</item>
+		<item>FC Groningen</item>
+		<item>FC Twente</item>
+		<item>FC Utrecht</item>
+		<item>Feyenoord</item>
+		<item>Go Ahead Eagles</item>
+		<item>Heracles Almelo</item>
+		<item>NAC Breda</item>
+		<item>PEC Zwolle</item>
+		<item>PSV</item>
+		<item>SC Cambuur</item>
+		<item>SC Heerenveen</item>
+		<item>Vitesse</item>
+		<item>Willem II</item>
+	</string-array>
+</resources>
