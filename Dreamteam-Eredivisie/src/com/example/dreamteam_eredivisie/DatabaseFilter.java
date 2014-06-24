@@ -26,19 +26,19 @@ public class DatabaseFilter extends Activity {
 		// fill spinners with data
 		mSpinnerPosition = (Spinner) findViewById(R.id.spinner_position);
 		ArrayAdapter<CharSequence> mSpinnerPositionArrayAdapter = ArrayAdapter.createFromResource(this,
-		        R.array.position, android.R.layout.simple_spinner_item);
+		        R.array.position, R.layout.spinner_layout);
 		mSpinnerPositionArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mSpinnerPosition.setAdapter(mSpinnerPositionArrayAdapter);
 		
 		mSpinnerSide = (Spinner) findViewById(R.id.spinner_side);
 		ArrayAdapter<CharSequence> mSpinnerSideArrayAdapter = ArrayAdapter.createFromResource(this,
-		        R.array.side, android.R.layout.simple_spinner_item);
+		        R.array.side, R.layout.spinner_layout);
 		mSpinnerSideArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mSpinnerSide.setAdapter(mSpinnerSideArrayAdapter);
 		
 		mSpinnerClub = (Spinner) findViewById(R.id.spinner_club);
 		ArrayAdapter<CharSequence> mSpinnerClubArrayAdapter = ArrayAdapter.createFromResource(this,
-		        R.array.club, android.R.layout.simple_spinner_item);
+		        R.array.club, R.layout.spinner_layout);
 		mSpinnerClubArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mSpinnerClub.setAdapter(mSpinnerClubArrayAdapter);
 		

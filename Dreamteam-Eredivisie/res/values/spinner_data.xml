@@ -12,6 +12,7 @@
 		<item>Right</item>
 		<item>Left</item>
 		<item>Centre</item>
+		<item>None</item>
 	</string-array>
 	<string-array name="club">
 		<item>Not Specified</item>

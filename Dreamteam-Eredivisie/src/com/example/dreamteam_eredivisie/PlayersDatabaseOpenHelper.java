@@ -39,10 +39,10 @@ public class PlayersDatabaseOpenHelper extends SQLiteOpenHelper{
         //  create database
     	db.execSQL(DATABASE_TABLE_CREATE);
         
-        // load in database
+    	// load in database
         for (int i = 0; i < sqlStatements.length; i++){
         	db.execSQL(sqlStatements[i]);
-        }
+        }        
     }
 
 	@Override
@@ -55,10 +55,13 @@ public class PlayersDatabaseOpenHelper extends SQLiteOpenHelper{
     public Cursor getPlayers(Context context){
     	mSpinner = context.getSharedPreferences("MySpinners", Context.MODE_PRIVATE);
     	SQLiteDatabase db = this.getReadableDatabase();
-    	String query = "SELECT _id, name, club, position, side, value FROM " + DATABASE_TABLE_NAME 
+    	/*String query = "SELECT * FROM " + DATABASE_TABLE_NAME 
     		+ " WHERE position LIKE " + mSpinner.getString("spinnerPosition", "FAILED")
     		+ " AND side LIKE " + mSpinner.getString("spinnerSide", "FAILED")
-    		+ " AND club LIKE " + mSpinner.getString("spinnerClub", "FAILED");
+    		+ " AND club LIKE " + mSpinner.getString("spinnerClub", "FAILED");*/
+    	String query = "SELECT * FROM " + DATABASE_TABLE_NAME
+        		+ " WHERE position LIKE " + mSpinner.getString("spinnerPosition", "FAILED");
+    	
     	Cursor selected = db.rawQuery(query, null);
     	selected.moveToFirst();
     	return selected;

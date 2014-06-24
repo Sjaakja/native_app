@@ -9,6 +9,10 @@
     <string name="title_activity_post_team">Post My Team</string>
     <string name="search_button">Search</string>
     
+    <string name="textView_position">Position:</string>
+    <string name="textView_side">Side:</string>
+    <string name="textView_club">Club:</string>
+    
     <string name="copyright">Copyright © Jaap van Bergeijk</string>
 
 </resources>
