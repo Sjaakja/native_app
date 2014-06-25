@@ -15,7 +15,7 @@ public class MySquadDatabaseOpenHelper extends SQLiteOpenHelper{
 	String mGetClub;
 	
 	private static final int DATABASE_VERSION = 1;
-	private static final String DATABASE_NAME = "Dreamteam";
+	private static final String DATABASE_NAME = "DreamteamMySquad";
     private static final String DATABASE_TABLE_NAME = "mysquad";
     private static final String DATABASE_TABLE_CREATE =
     	"CREATE TABLE " + DATABASE_TABLE_NAME + "(" +
@@ -71,11 +71,11 @@ public class MySquadDatabaseOpenHelper extends SQLiteOpenHelper{
     	
     	// delete selected player from database mysquad
     	SQLiteDatabase db = this.getWritableDatabase();
-    	String query = "DELETE FROM mysquad WHERE name = " + name + 
-    			" AND club = " + club +
-    			" AND position = " + position +
-    			" AND side = " + side +
-    			" AND value = " + value;
+    	String query = "DELETE FROM mysquad WHERE name = \'" + name + "\'" +
+    			" AND club = \'" + club + "\'" +
+    			" AND position = \'" + position + "\'" +
+    			" AND side = \'" + side + "\'" +
+    			" AND value = \'" + value + "\'";
     	db.execSQL(query);
     }
 }

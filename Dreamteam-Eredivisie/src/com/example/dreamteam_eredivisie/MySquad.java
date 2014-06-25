@@ -57,8 +57,12 @@ public class MySquad extends ListActivity {
 								clickedPlayer.getString(clickedPlayer.getColumnIndex("position")),
 								clickedPlayer.getString(clickedPlayer.getColumnIndex("side")),
 								clickedPlayer.getInt(clickedPlayer.getColumnIndex("value")));
-				    	
+																				    	
 						Toast.makeText(context, "Player deleted from squad", Toast.LENGTH_SHORT).show();
+						
+						// reload activity
+						finish();
+						startActivity(getIntent());
 					}
 				});
 				alertDialog.setNegativeButton("Decline", new DialogInterface.OnClickListener() {
@@ -66,7 +70,7 @@ public class MySquad extends ListActivity {
 						Toast.makeText(context, "Deletion of player aborted", Toast.LENGTH_SHORT).show();
 					}
 				});
-				alertDialog.setIcon(R.drawable.football_player);
+				alertDialog.setIcon(R.drawable.red_card);
 				alertDialog.show();	
 		    
 		    }});
