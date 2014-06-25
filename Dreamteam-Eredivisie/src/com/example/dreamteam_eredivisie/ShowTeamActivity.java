@@ -3,7 +3,7 @@ package com.example.dreamteam_eredivisie;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class ShowTeam extends Activity {
+public class ShowTeamActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

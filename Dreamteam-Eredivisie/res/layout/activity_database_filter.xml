@@ -4,57 +4,99 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context="${packageName}.${activityClass}" >
-
-    <Spinner
-        android:id="@+id/spinner_position"
-        android:layout_width="250dp"
+       
+    <RelativeLayout
+        android:id="@+id/RLayoutTop"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"/>
+        android:layout_above="@+id/RLayoutMiddle" >
+	      
+	    <TextView
+	        android:id="@+id/textView_position"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@+id/dummy_top"
+	        android:layout_centerVertical="true"
+	        android:text="@string/textView_position"
+	        android:textColor="#ffffff"
+	        android:textSize="24sp" />
+	    
+	    <View 
+	        android:id="@+id/dummy_top" 
+	        android:layout_width="0dp" 
+	        android:layout_height="0dp"
+	        android:layout_centerHorizontal="true" 
+	        android:visibility="invisible" />
+	        
+	     <Spinner
+	        android:id="@+id/spinner_position"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/dummy_top" />
+	     
+    </RelativeLayout>
+        
+    <RelativeLayout
+        android:id="@+id/RLayoutMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+        	    
+        <TextView
+	        android:id="@+id/textView_side"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@+id/dummy_middle"
+	        android:layout_centerVertical="true"
+	        android:text="@string/textView_side"
+	        android:textColor="#ffffff"
+	        android:textSize="24sp" />
+        
+        <View 
+	        android:id="@+id/dummy_middle" 
+	        android:layout_width="0dp" 
+	        android:layout_height="0dp"
+	        android:layout_centerHorizontal="true" 
+	        android:visibility="invisible" />
+        
+        <Spinner
+	        android:id="@+id/spinner_side"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/dummy_middle" />
+        
+	</RelativeLayout>
     
-    <Spinner
-        android:id="@+id/spinner_side"
-        android:layout_width="250dp"
+    <RelativeLayout
+        android:id="@+id/RLayoutDown"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/spinner_position" />
-    
-    <Spinner
-        android:id="@+id/spinner_club"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/spinner_side" />
-
-    <TextView
-        android:id="@+id/textView_position"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/textView_position"
-        android:textColor="#ffffff"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textView_side"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView_position"
-        android:text="@string/textView_side"
-        android:textColor="#ffffff"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/textView_club"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView_side"
-        android:text="@string/textView_club"
-        android:textColor="#ffffff"
-        android:textSize="24sp" />
+        android:layout_below="@+id/RLayoutMiddle" >
+    	
+        <TextView
+	        android:id="@+id/textView_club"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@+id/dummy_down"
+	        android:layout_centerVertical="true"
+	        android:text="@string/textView_club"
+	        android:textColor="#ffffff"
+	        android:textSize="24sp" />
+        
+        <View 
+	        android:id="@+id/dummy_down" 
+	        android:layout_width="0dp" 
+	        android:layout_height="0dp"
+	        android:layout_centerHorizontal="true" 
+	        android:visibility="invisible" />
+        
+        <Spinner
+	        android:id="@+id/spinner_club"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/dummy_down" />
+        
+    </RelativeLayout>
     
     <Button
         android:id="@+id/button_search"

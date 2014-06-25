@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
-public class DatabaseFilter extends Activity {
+public class DatabaseFilterActivity extends Activity {
 	
 	Spinner mSpinnerPosition;
 	Spinner mSpinnerSide;
@@ -47,8 +47,8 @@ public class DatabaseFilter extends Activity {
 		buttonSearch.setOnClickListener(new View.OnClickListener() {
 		    @Override
 		    public void onClick(View view) {
-		    	Intent activityChangeIntent = new Intent(DatabaseFilter.this, FilteredDatabase.class);
-		    	DatabaseFilter.this.startActivity(activityChangeIntent);
+		    	Intent activityChangeIntent = new Intent(DatabaseFilterActivity.this, FilteredDatabaseActivity.class);
+		    	DatabaseFilterActivity.this.startActivity(activityChangeIntent);
 		    }
 		});
 	}

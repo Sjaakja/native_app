@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Home extends Activity {
+public class HomeActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,8 @@ public class Home extends Activity {
 		buttonMySquad.setOnClickListener(new View.OnClickListener() {
 		    @Override
 		    public void onClick(View view) {
-		    	Intent activityChangeIntent = new Intent(Home.this, MySquad.class);
-		    	Home.this.startActivity(activityChangeIntent);
+		    	Intent activityChangeIntent = new Intent(HomeActivity.this, MySquadActivity.class);
+		    	HomeActivity.this.startActivity(activityChangeIntent);
 		    }
 		});
 		
@@ -26,8 +26,8 @@ public class Home extends Activity {
 		buttonDatabase.setOnClickListener(new View.OnClickListener() {
 		    @Override
 		    public void onClick(View view) {
-		    	Intent activityChangeIntent = new Intent(Home.this, DatabaseFilter.class);
-		    	Home.this.startActivity(activityChangeIntent);
+		    	Intent activityChangeIntent = new Intent(HomeActivity.this, DatabaseFilterActivity.class);
+		    	HomeActivity.this.startActivity(activityChangeIntent);
 		    }
 		});
 		
@@ -35,8 +35,8 @@ public class Home extends Activity {
 		buttonPostTeam.setOnClickListener(new View.OnClickListener() {
 		    @Override
 		    public void onClick(View view) {
-		    	Intent activityChangeIntent = new Intent(Home.this, PostTeam.class);
-		    	Home.this.startActivity(activityChangeIntent);
+		    	Intent activityChangeIntent = new Intent(HomeActivity.this, PostTeamActivity.class);
+		    	HomeActivity.this.startActivity(activityChangeIntent);
 		    }
 		});
 	}
