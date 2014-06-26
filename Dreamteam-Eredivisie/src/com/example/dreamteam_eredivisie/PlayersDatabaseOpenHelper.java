@@ -62,16 +62,14 @@ public class PlayersDatabaseOpenHelper extends SQLiteOpenHelper{
 	    onCreate(db);
 	}
     
+	// get a filtered list of players to show
     public Cursor getFilteredPlayers(Context context){
     	mSpinner = context.getSharedPreferences("MySpinners", Context.MODE_PRIVATE);
     	SQLiteDatabase db = this.getReadableDatabase();
-    	/*String query = "SELECT * FROM " + DATABASE_TABLE_NAME 
-    		+ " WHERE position LIKE " + mSpinner.getString("spinnerPosition", "FAILED")
-    		+ " AND side LIKE " + mSpinner.getString("spinnerSide", "FAILED")
-    		+ " AND club LIKE " + mSpinner.getString("spinnerClub", "FAILED");*/
-    	String query = "SELECT * FROM " + DATABASE_TABLE_NAME_PLAYERS
-        		+ " WHERE position LIKE " + mSpinner.getString("spinnerPosition", "FAILED");
-    	
+    	String query = "SELECT * FROM " + DATABASE_TABLE_NAME_PLAYERS +
+    		" WHERE position LIKE \'" + mSpinner.getString("spinnerPosition", "FAILED") + "\'" +
+    		" AND side LIKE \'" + mSpinner.getString("spinnerSide", "FAILED") + "\'" +
+    		" AND club LIKE \'" + mSpinner.getString("spinnerClub", "FAILED") + "\'";
     	Cursor selected = db.rawQuery(query, null);
     	selected.moveToFirst();
     	return selected;
@@ -93,9 +91,14 @@ public class PlayersDatabaseOpenHelper extends SQLiteOpenHelper{
     	
     	String queryCheck = "SELECT * FROM " + DATABASE_TABLE_NAME_MYSQUAD
         		+ " WHERE name LIKE \'" + name + "\'";
-    	Cursor checkCursor = db.rawQuery(queryCheck, null);
+    	Cursor checkCursorMySquadName = db.rawQuery(queryCheck, null);
     	
-    	if (checkCursor.getCount() == 0){
+    	String queryCheckPositionSide = "SELECT * FROM " + DATABASE_TABLE_NAME_MYSQUAD +
+        		" WHERE position LIKE \'" + position + "\'" +
+        		" AND side LIKE \'" + side + "\'";
+    	Cursor checkCursorMySquadPositionSide = db.rawQuery(queryCheckPositionSide, null);
+    	
+    	if (checkCursorMySquadName.getCount() == 0 && checkCursorMySquadPositionSide.getCount() == 0){
     		String query = "INSERT INTO "+ DATABASE_TABLE_NAME_MYSQUAD + " (name,club,position,side,value) VALUES (\'" + 
         			name + "\', \'" +
         			club + "\', \'" +
@@ -103,15 +106,19 @@ public class PlayersDatabaseOpenHelper extends SQLiteOpenHelper{
         			side + "\', " +
         			value + ")";
         	db.execSQL(query);   
-    	}
+    	}	
     	else{
-    		Toast.makeText(context, "Wanted player is already in your squad", Toast.LENGTH_LONG).show();	
+    		if(checkCursorMySquadName.getCount() != 0){
+    			Toast.makeText(context, "You already have this player in your squad", Toast.LENGTH_LONG).show();
+    		}
+    		else{
+    			Toast.makeText(context, "You already have a player for this position in your squad", Toast.LENGTH_LONG).show();
+    		}
     	}   	 	
     }
     
+    // delete selected player from table mysquad
     public void deletePlayerMySquad(Context context, String name, String club, String position, String side, int value){
-    	
-    	// delete selected player from table mysquad
     	SQLiteDatabase db = this.getWritableDatabase();
     	String query = "DELETE FROM "+ DATABASE_TABLE_NAME_MYSQUAD + " WHERE name = \'" + name + "\'" +
     			" AND club = \'" + club + "\'" +
@@ -120,6 +127,17 @@ public class PlayersDatabaseOpenHelper extends SQLiteOpenHelper{
     			" AND value = \'" + value + "\'";
     	db.execSQL(query);
     }
+    
+    // get the player (from given position) from table mysquad
+    public Cursor getYourSquadFiller(Context context, String position, String side){
+    	SQLiteDatabase db = this.getReadableDatabase();
+    	String query = "SELECT * FROM " + DATABASE_TABLE_NAME_MYSQUAD +
+    		" WHERE position LIKE \'" + position + "\'" +
+    		" AND side LIKE \'" + side + "\'";
+    	Cursor selected = db.rawQuery(query, null);
+    	selected.moveToFirst();
+    	return selected;
+	}
 }
 
 

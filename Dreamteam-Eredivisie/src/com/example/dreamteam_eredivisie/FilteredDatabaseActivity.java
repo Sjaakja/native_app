@@ -23,18 +23,20 @@ public class FilteredDatabaseActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_filtered_database);
 		
-		this.mContext = this;
+		mContext = this;
 		
 		mDatabase = new PlayersDatabaseOpenHelper(this);
 		mCursorFiltered = mDatabase.getFilteredPlayers(this);
 		String[] fromColumns = {"name", "club", "position", "side", "value"};
 		int[] toControlIDs = {R.id.name, R.id.club, R.id.position, R.id.side, R.id.value};
+		
 		// use a SimpleCursorAdapter to show filtered players
 		mCursorAdapter = new SimpleCursorAdapter (this, R.layout.list_view_layout, mCursorFiltered,
 		       fromColumns,
 		       toControlIDs, 0);
 		setListAdapter(mCursorAdapter);
-		
+				
+		// respond to click on player in ListView
 		getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 		    public void onItemClick(AdapterView<?> parent, View v, int position, long id){
 		    	
@@ -47,7 +49,7 @@ public class FilteredDatabaseActivity extends ListActivity {
 				alertDialog.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 										    	
-				    	// add player to squad
+				    	// add player to MySquad
 						mDatabase.addPlayerMySquad(mContext, 
 								clickedPlayer.getString(clickedPlayer.getColumnIndex("name")), 
 								clickedPlayer.getString(clickedPlayer.getColumnIndex("club")), 

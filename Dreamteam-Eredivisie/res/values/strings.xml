@@ -8,10 +8,26 @@
     <string name="title_activity_filtered_database">Filtered Database</string>
     <string name="title_activity_post_team">Post My Team</string>
     <string name="search_button">Search</string>
+    <string name="to">To:</string>
+    <string name="hint">Email address to send to</string>
+    
+    <string name="empty"></string>
     
     <string name="textView_position">Position:</string>
     <string name="textView_side">Side:</string>
     <string name="textView_club">Club:</string>
+    
+    <string name="Goalkeeper">GK:</string>
+    <string name="DefenderRight">DR:</string>
+    <string name="DefenderLeft">DL:</string>
+    <string name="DefenderCentre">DC:</string>
+    <string name="DefensiveMidfielder">DM:</string>
+    <string name="MidfielderRight">MR:</string>
+    <string name="MidfielderLeft">ML:</string>
+    <string name="MidfielderCentre">MC:</string>
+    <string name="AttackerRight">AR:</string>
+    <string name="AttackerLeft">AL:</string>
+    <string name="AttackerCentre">AC:</string>
     
     <string name="copyright">Copyright © Jaap van Bergeijk</string>
 

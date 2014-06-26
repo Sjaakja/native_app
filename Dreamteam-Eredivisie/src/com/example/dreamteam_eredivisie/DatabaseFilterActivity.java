@@ -42,7 +42,7 @@ public class DatabaseFilterActivity extends Activity {
 		mSpinnerClubArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		mSpinnerClub.setAdapter(mSpinnerClubArrayAdapter);
 		
-		// react on buttonClick
+		// button to get to activity FilteredDatabase
 		Button buttonSearch = (Button) findViewById(R.id.button_search);
 		buttonSearch.setOnClickListener(new View.OnClickListener() {
 		    @Override
@@ -59,24 +59,24 @@ public class DatabaseFilterActivity extends Activity {
 		SharedPreferences.Editor editor = mSpinner.edit();
 		mStar = "Not Specified";
 		
-		//store spinner values in SharedPreferences
+		//store spinner values in SharedPreferences file MySpinners
 		if (mSpinnerPosition.getSelectedItem().toString().equals(mStar)){
-			editor.putString("spinnerPosition", "'%'");
+			editor.putString("spinnerPosition", "%");
 		}
 		else{
-			editor.putString("spinnerPosition", "'" + mSpinnerPosition.getSelectedItem().toString() + "'");
+			editor.putString("spinnerPosition", mSpinnerPosition.getSelectedItem().toString());
 		}
 		if (mSpinnerSide.getSelectedItem().toString().equals(mStar)){
-			editor.putString("spinnerSide", "'%'");
+			editor.putString("spinnerSide", "%");
 		}
 		else{
-			editor.putString("spinnerSide", "'" + mSpinnerSide.getSelectedItem().toString() + "'");
+			editor.putString("spinnerSide", mSpinnerSide.getSelectedItem().toString());
 		}
 		if (mSpinnerClub.getSelectedItem().toString().equals(mStar)){
-			editor.putString("spinnerClub", "'%'");
+			editor.putString("spinnerClub", "%");
 		}
 		else{
-			editor.putString("spinnerClub", "'" + mSpinnerClub.getSelectedItem().toString() + "'");
+			editor.putString("spinnerClub", mSpinnerClub.getSelectedItem().toString());
 		}
 		editor.commit();
 		

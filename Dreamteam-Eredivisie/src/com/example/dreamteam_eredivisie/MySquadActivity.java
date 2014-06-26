@@ -14,7 +14,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 
 public class MySquadActivity extends ListActivity {
-
+	
 	PlayersDatabaseOpenHelper mDatabase;
 	SimpleCursorAdapter mCursorAdapter;
 	Cursor mCursorAllPlayers;
@@ -25,18 +25,19 @@ public class MySquadActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_my_squad);
 		
-		this.mContext = this;
-		
+		mContext = this;
 		mDatabase = new PlayersDatabaseOpenHelper(this);
 		mCursorAllPlayers = mDatabase.getAllPlayersMySquad(this);
 		String[] fromColumns = {"name", "club", "position", "side", "value"};
 		int[] toControlIDs = {R.id.name, R.id.club, R.id.position, R.id.side, R.id.value};
-		// use a SimpleCursorAdapter to show filtered players
+		
+		// use a SimpleCursorAdapter to show filtered players in ListView in MySquadActivity
 		mCursorAdapter = new SimpleCursorAdapter (this, R.layout.list_view_layout, mCursorAllPlayers,
 		       fromColumns,
 		       toControlIDs, 0);
 		setListAdapter(mCursorAdapter);
 		
+		// respond to click on player in ListView
 		getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 		    public void onItemClick(AdapterView<?> parent, View v, int position, long id){
 		    	
@@ -49,6 +50,7 @@ public class MySquadActivity extends ListActivity {
 				alertDialog.setPositiveButton("Accept", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
 						
+						// deletion of player from MySquad
 						mDatabase.deletePlayerMySquad(mContext, 
 								clickedPlayer.getString(clickedPlayer.getColumnIndex("name")),
 								clickedPlayer.getString(clickedPlayer.getColumnIndex("club")),
@@ -73,6 +75,7 @@ public class MySquadActivity extends ListActivity {
 		    
 		    }});
 		
+		// button to get to activity ShowTeam
 		Button showTeam = (Button) findViewById(R.id.button_show_team);
 		showTeam.setOnClickListener(new View.OnClickListener() {
 		    @Override

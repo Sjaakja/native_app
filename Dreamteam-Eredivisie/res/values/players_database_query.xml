@@ -4,5 +4,23 @@
 		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Kenneth Vermeer\', \'AJAX\', \'Goalkeeper\', \'None\', 3000000)</item>
 		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Jasper Cillisen\', \'AJAX\', \'Goalkeeper\', \'None\', 5000000)</item>
 		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Ricardo van Rhijn\', \'AJAX\', \'Defender\', \'Right\', 4500000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Viktor Fischer\', \'AJAX\', \'Attacker\', \'Left\', 7500000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Stefan de Vrij\', \'Feyenoord\', \'Defender\', \'Centre\', 6000000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Memphis Depay\', \'PSV\', \'Attacker\', \'Left\', 10000000)</item>		
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Diederik Boer\', \'PEC Zwolle\', \'Goalkeeper\', \'None\', 800000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Tom Beugelsdijk\', \'ADO Den Haag\', \'Defender\', \'Centre\', 900000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Dirk Marcellis\', \'AZ\', \'Defender\', \'Right\', 900000)</item>		
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Adil Auassar\', \'Excelsior\', \'Midfielder\', \'Centre\', 300000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Marvin Peersman\', \'FC Dordrecht\', \'Defender\', \'Left\', 250000)</item>		
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Rasmus Lindgren\', \'FC Groningen\', \'Defensive Midfielder\', \'Centre\', 700000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Wout Brama\', \'FC Twente\', \'Defensive Midfielder\', \'Centre\', 1000000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Jens Toornstra\', \'FC Utrecht\', \'Midfielder\', \'Centre\', 2000000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Sjoerd Overgoor\', \'Go Ahead Eagles\', \'Defensive Midfielder\', \'Centre\', 750000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Thomas Bruns\', \'Heracles Almelo\', \'Midfielder\', \'Right\', 1000000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Jeffrey Sarpong\', \'NAC Breda\', \'Midfielder\', \'Left\', 650000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Jody Lukoki\', \'SC Cambuur\', \'Attacker\', \'Right\', 400000)</item>		
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Alfred Finbogason\', \'SC Heerenveen\', \'Attacker\', \'Centre\', 8000000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Davy Pröpper\', \'Vitesse\', \'Midfielder\', \'Centre\', 900000)</item>
+		<item>INSERT INTO players (name,club,position,side,value) VALUES (\'Ruud Boymans\', \'Willem II\', \'Attacker\', \'Centre\', 1000000)</item>
 	</string-array>
 </resources>

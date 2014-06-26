@@ -13,6 +13,7 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
+		// various buttons to get to activities MySquad, DatabaseFilter and PostTeam
 		Button buttonMySquad = (Button) findViewById(R.id.button_my_squad);
 		buttonMySquad.setOnClickListener(new View.OnClickListener() {
 		    @Override
